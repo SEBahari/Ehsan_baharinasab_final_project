@@ -15,7 +15,7 @@ function App() {
                 path={path}
                 exact={exact}
               >
-                {(isPrivate && !isLogin) ? <Redirect to={'/'} /> : <Component />}
+                {(isPrivate && !isLogin) ? <Redirect to={'/login'} /> : <Component />}
               </Route>
             ))
           }
