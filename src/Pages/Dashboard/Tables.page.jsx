@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Login() {
+function Tables() {
    return (
       <div>
-         <h1>ورود</h1>
+         <h1>Tables</h1>
       </div>
    );
 }
 
-export default Login;
+export default Tables;

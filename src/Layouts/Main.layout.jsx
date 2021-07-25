@@ -1,8 +1,12 @@
 import React from 'react';
-import { Switch, Route } from 'react-router';
+import { Navbar, Container, Nav, FormControl, Form } from 'react-bootstrap';
+import { Switch, Route, useRouteMatch, Link, NavLink } from 'react-router-dom';
 import routes from '../Router/main.routes';
+import { RiShoppingBag3Line } from 'react-icons/ri';
+import { MdPerson, MdShoppingCart } from 'react-icons/md';
 
 function Main() {
+   const match = useRouteMatch();
    return (
       <>
          <Switch>
@@ -10,7 +14,7 @@ function Main() {
                routes.map(({ path, exact, Component }, index) => (
                   <Route
                      key={index}
-                     path={path}
+                     path={match.path + path}
                      exact={exact}
                   >
                      <Component />
