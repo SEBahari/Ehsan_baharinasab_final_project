@@ -1,8 +1,8 @@
 import { lazy } from 'react';
 
-const Charts = lazy(() => import('../Pages/Dashboard/Charts.page'));
-const Tables = lazy(() => import('../Pages/Dashboard/Tables.page'));
-const Dashboard = lazy(() => import('../Pages/Dashboard/Dashboard.page'));
+const Charts = lazy(() => import('../Pages/Dashboard/Charts/Charts.page'));
+const Tables = lazy(() => import('../Pages/Dashboard/Tables/Tables.page'));
+const Dashboard = lazy(() => import('../Pages/Dashboard/Dashboard/Dashboard.page'));
 
 const routes = [
    { path: 'charts/', exact: false, tilte: 'Charts', Component: Charts, isPrivate: true },

@@ -1,9 +1,9 @@
 import React from "react";
-const Home = React.lazy(() => import('../Pages/Main/Home.page'));
-const Login = React.lazy(() => import('../Pages/Main/Login.page'));
-const Register = React.lazy(() => import('../Pages/Main/Register.page'));
-const Products = React.lazy(() => import('../Pages/Main/Products.page'));
-const Product = React.lazy(() => import('../Pages/Main/Product.page'));
+const Home = React.lazy(() => import('../Pages/Main/Home/Home.page'));
+const Login = React.lazy(() => import('../Pages/Main/Login/Login.page'));
+const Register = React.lazy(() => import('../Pages/Main/Register/Register.page'));
+const Products = React.lazy(() => import('../Pages/Main/Products/Products.page'));
+const Product = React.lazy(() => import('../Pages/Main/Product/Product.page'));
 
 const routes = [
    { path: 'products/:id/', exact: false, Component: Product, title: 'Product', isPrivate: false },
