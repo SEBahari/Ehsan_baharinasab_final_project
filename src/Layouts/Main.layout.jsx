@@ -1,27 +1,29 @@
 import React from 'react';
-import { Navbar, Container, Nav, FormControl, Form } from 'react-bootstrap';
-import { Switch, Route, useRouteMatch, Link, NavLink } from 'react-router-dom';
+import { Switch, Route, useRouteMatch } from 'react-router-dom';
 import routes from '../Router/main.routes';
-import { RiShoppingBag3Line } from 'react-icons/ri';
-import { MdPerson, MdShoppingCart } from 'react-icons/md';
+import Header from '../Components/Main/Header';
+import 'bootstrap/dist/css/bootstrap.rtl.min.css';
 
 function Main() {
    const match = useRouteMatch();
    return (
       <>
-         <Switch>
-            {
-               routes.map(({ path, exact, Component }, index) => (
-                  <Route
-                     key={index}
-                     path={match.path + path}
-                     exact={exact}
-                  >
-                     <Component />
-                  </Route>
-               ))
-            }
-         </Switch>
+         <Header />
+         <main style={{ paddingTop: '115px' }}>
+            <Switch>
+               {
+                  routes.map(({ path, exact, Component }, index) => (
+                     <Route
+                        key={index}
+                        path={match.path + path}
+                        exact={exact}
+                     >
+                        <Component />
+                     </Route>
+                  ))
+               }
+            </Switch>
+         </main>
       </>
    );
 }
