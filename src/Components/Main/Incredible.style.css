@@ -1,93 +1,112 @@
 .a-incredible {
-  width: 100%;
-  padding: 1.5rem 0;
-  margin: 2rem 0;
-  /* background-color: #dc3545; */
-  position: relative;
+	width: 100%;
+	padding: 1.5rem 0;
+	margin: 2rem 0;
+	/* background-color: #dc3545; */
+	position: relative;
 }
+
 .a-incredible__row {
-  overflow-x: auto;
-  white-space: nowrap;
+	overflow-x: auto;
+	white-space: nowrap;
 }
 
 .a-incredible__row::-webkit-scrollbar {
-  display: none;
+	display: none;
 }
+
 .a-incredible__title-container {
-  overflow: hidden;
-  width: 16rem;
-  height: 23rem;
-  display: inline-block;
+	overflow: hidden;
+	width: 16rem;
+	height: 23rem;
+	display: inline-block;
 }
+
 .a-incredible__title {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 500;
-  font-size: calc(1.3rem + 0.6%);
-  line-height: 1.2;
-  color: whitesmoke;
-  text-decoration: none;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 500;
+	font-size: calc(1.3rem + 0.6%);
+	line-height: 1.2;
+	color: whitesmoke;
+	text-decoration: none;
 }
+
 a.a-incredible__title:hover {
-  color: whitesmoke;
-  text-decoration: none;
+	color: whitesmoke;
+	text-decoration: none;
+}
+
+.a-incredible__title i {
+	font-size: inherit;
 }
 
 .a-incredible__item {
-  overflow: hidden;
-  width: 16rem;
-  height: 23rem;
-  margin-left: 1.5rem;
-  border-radius: 0.5rem;
-  display: inline-block;
-  white-space: normal;
-  padding: 0;
-  background-color: #fff;
+	overflow: hidden;
+	width: 16rem;
+	height: 23rem;
+	margin-left: 1.5rem;
+	border-radius: 0.5rem;
+	display: inline-block;
+	white-space: normal;
+	padding: 0;
+	background-color: #fff;
 }
+
 .a-incredible__card {
-  height: 100%;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  word-wrap: break-word;
+	height: 100%;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	min-width: 0;
+	word-wrap: break-word;
 }
+
 .a-incredible__card-image {
-  width: 100%;
-  height: 10rem;
-  box-shadow: 0 7px 8px 0 #000;
+	width: 100%;
+	height: 10rem;
+	box-shadow: 0 7px 8px 0 #000;
 }
+
 .a-incredible__card-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
 }
+
 .a-incredible__card-body {
-  background-color: #fff;
-  color: #515151;
-  height: 100%;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: space-between;
+	background-color: #fff;
+	color: #515151;
+	flex: 1;
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	justify-content: space-between;
 }
+
 .a-incredible__card-title {
-  font-weight: 500;
-  line-height: 1.2;
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
+	font-weight: 500;
+	line-height: 1.2;
+	font-size: 1.25rem;
+	margin-bottom: 0.5rem;
 }
+
 .a-incredible__card-text {
-  flex: 1;
+	flex: 1;
 }
+
 .a-incredible__card-footer {
-  display: flex;
-  justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
+}
+
+.a-incredible__card-footer i {
+	font-size: 1.5rem;
 }
 
 /* .a-incredible__title { */
