@@ -1,14 +1,16 @@
 import React from "react";
 import "./Home.style.css";
-import bannerImage from "../../../images/01-Mercedes-Benz-G-Class-G-500-4x4-2-Wallpaper-3840x2160.jpg";
+import bannerImage
+  from "../../../images/01-Mercedes-Benz-G-Class-G-500-4x4-2-Wallpaper-3840x2160.jpg";
 import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
     <>
-      {/*<div className="banner banner--left">*/}
-      {/*  <div className="banner banner--center">*/}
-        <div className="banner banner--right">
+      {/* Banner */}
+      <div className="banner banner--right">
+        {/*  <div className="banner banner--center">*/}
+        {/*<div className="banner banner--left">*/}
         <div className="banner__image">
           <img src={bannerImage} alt="mercedes benz g-class g-500 4x4"/>
         </div>
