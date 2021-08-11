@@ -1,0 +1,82 @@
+.banner {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+}
+
+.banner__image {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.banner__image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+.banner__content {
+	transform: translateY(-50%);
+	position: absolute;
+	top: 50%;
+}
+
+.banner__text {
+	margin-bottom: 2rem;
+	text-shadow: 0 0 15px rgba(255, 255, 255, 1),
+	0 0 10px rgba(0, 0, 0, 1),
+	0 0 5px rgba(255, 255, 255, 1);
+	color: #1f1f1f;
+	font-size: 2rem;
+	font-weight: 500;
+}
+
+.banner__text p {
+	margin-bottom: 0;
+}
+
+.banner__button {
+	background-color: #191919;
+	color: whitesmoke;
+	padding: 1rem 2rem;
+	border: 1px solid #212529;
+	text-decoration: none;
+	display: inline-block;
+}
+
+.banner__button:hover {
+	color:whitesmoke;
+	transform: scale(1.1);
+}
+
+.banner--left .banner__content {
+	left: 10vw;
+	text-align: left;
+}
+
+.banner--left .banner__text {
+	text-align: left;
+}
+
+.banner--right .banner__content {
+	right: 10vw;
+	text-align: right;
+}
+
+.banner--right .banner__text {
+	text-align: right;
+}
+
+.banner--center .banner__content {
+	transform:translate(50%, -50%);
+	right: 50%;
+	text-align: center;
+}
+
+.banner--center .banner__text {
+	text-align: center;
+}
