@@ -65,7 +65,7 @@ function Header() {
                 <li
                   className="td-nav__item"
                   onMouseOver={()=>setOverlay(true)}
-                  onMouseLeave={()=>setOverlay(false)}
+                  onMouseOut={()=>setOverlay(false)}
                 >
                   <Link to={"products"} className="td-nav__link">تخفیف ها</Link>
                   <div className="td-nav__marker"/>
@@ -138,7 +138,7 @@ function Header() {
             </button>
           </div>
         </div>
-        {overlay &&<div className={"t-header__overlay shown"}>OVERLAY</div>}
+        {overlay &&<div className={"t-header__overlay shown"}/>}
         <a href={"https://github.com/SEBahari/Ehsan_baharinasab_final_project"}
            className="github-link" target={"_blank"} rel={"noreferrer"}><i
           className={"bi bi-github"}/></a>
