@@ -1,131 +1,77 @@
 import React from "react";
-import "./Incredible.style.css";
-import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import ProductsRow from "./ProductsRow";
+import cardImage1 from "../../images/6x6-gornos-w.jpg";
+import cardImage2 from "../../images/photo_۲۰۱۷-۱۲-۲۸_۱۱-۵۹-۱۹.jpg";
+import cardImage3 from "../../images/AAFW1413.png";
+import cardImage4 from "../../images/ford_mustang_muscle_car-wide.jpg";
+import cardImage5 from "../../images/photo_2017-09-07_10-40-17.jpg";
 
-function Incredible( { bgc } ) {
+const list = [
+  {
+    image: cardImage1,
+    title: "مرسدس بنز",
+    subtitle: "G-500",
+    discount: 10,
+    originalPrice: '100,000',
+    newPrice: '90,000',
+    route: '/products/mercedes',
+  },
+  {
+    image: cardImage2,
+    title: "تویوتا",
+    subtitle: "GTR",
+    discount: 10,
+    originalPrice: "100,000",
+    newPrice: "90,000",
+    route: "/products/gtr",
+  },
+  {
+    image: cardImage3,
+    title: "دوج چلنجر",
+    subtitle: "Helcat",
+    discount: 10,
+    originalPrice: "100,000",
+    newPrice: "90,000",
+    route: "/products/chalenger",
+  },
+  {
+    image: cardImage4,
+    title: "فورد",
+    subtitle: "mustang",
+    discount: 10,
+    originalPrice: "100,000",
+    newPrice: "90,000",
+    route: "/products/mustang",
+  },
+  {
+    image: cardImage5,
+    title: "پورشه",
+    subtitle: "macan",
+    discount: 10,
+    originalPrice: "100,000",
+    newPrice: "90,000",
+    route: "/products/macan",
+  }
+];
+
+function Incredible() {
   return (
     <>
-      <div className={"a-incredible " + bgc}>
-        {/* <h3 className={"a-incredible__title"} >اسپانسر&zwnj;های ما</h3> */}
-        <div className={"a-incredible__row"}>
-          <div className={"a-incredible__title-container"}>
-            <Link to={"/"} className={"a-incredible__title"}>
-              تخفیفات باور نکردنی
-              <i className={"bi bi-chevron-compact-left"}/>
-            </Link>
-          </div>
-          <div className={" a-incredible__item"}>
-            <div className={"a-incredible__card"}>
-              <div className={"a-incredible__card-image"}>
-                <img src={"https://i.pravatar.cc/100?u={" + makeId()} alt={"lorem picsum"}/>
-              </div>
-              <div className={"a-incredible__card-body"}>
-                <div className={"a-incredible__card-title"}>عنوان</div>
-                <p className={"a-incredible__card-text"}>
-                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ است.
-                </p>
-                <div className={"a-incredible__card-footer"}>
-                  <button className={"btn py-0"}>
-                    <i className={"bi bi-cart-plus"}/>
-                  </button>
-                  <Button variant={"primary"}>مشاهده</Button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className={" a-incredible__item"}>
-            <div className={"a-incredible__card"}>
-              <div className={"a-incredible__card-image"}>
-                <img src={"https://i.pravatar.cc/100?u={" + makeId()} alt={"lorem picsum"}/>
-              </div>
-              <div className={"a-incredible__card-body"}>
-                <div className={"a-incredible__card-title"}>عنوان</div>
-                <p className={"a-incredible__card-text"}>
-                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ است.
-                </p>
-                <div className={"a-incredible__card-footer"}>
-                  <button className={"btn py-0"}>
-                    <i className={"bi bi-cart-plus"}/>
-                  </button>
-                  <Button variant={"primary"}>مشاهده</Button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className={" a-incredible__item"}>
-            <div className={"a-incredible__card"}>
-              <div className={"a-incredible__card-image"}>
-                <img src={"https://i.pravatar.cc/100?u={" + makeId()} alt={"lorem picsum"}/>
-              </div>
-              <div className={"a-incredible__card-body"}>
-                <div className={"a-incredible__card-title"}>عنوان</div>
-                <p className={"a-incredible__card-text"}>
-                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ است.
-                </p>
-                <div className={"a-incredible__card-footer"}>
-                  <button className={"btn py-0"}>
-                    <i className={"bi bi-cart-plus"}/>
-                  </button>
-                  <Button variant={"primary"}>مشاهده</Button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className={" a-incredible__item"}>
-            <div className={"a-incredible__card"}>
-              <div className={"a-incredible__card-image"}>
-                <img src={"https://i.pravatar.cc/100?u={" + makeId()} alt={"lorem picsum"}/>
-              </div>
-              <div className={"a-incredible__card-body"}>
-                <div className={"a-incredible__card-title"}>عنوان</div>
-                <p className={"a-incredible__card-text"}>
-                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ است.
-                </p>
-                <div className={"a-incredible__card-footer"}>
-                  <button className={"btn py-0"}>
-                    <i className={"bi bi-cart-plus"}/>
-                  </button>
-                  <Button variant={"primary"}>مشاهده</Button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className={" a-incredible__item"}>
-            <div className={"a-incredible__card"}>
-              <div className={"a-incredible__card-image"}>
-                <img src={"https://i.pravatar.cc/100?u={" + makeId()} alt={"lorem picsum"}/>
-              </div>
-              <div className={"a-incredible__card-body"}>
-                <div className={"a-incredible__card-title"}>عنوان</div>
-                <p className={"a-incredible__card-text"}>
-                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ است.
-                </p>
-                <div className={"a-incredible__card-footer"}>
-                  <button className={"btn py-0"}>
-                    <i className={"bi bi-cart-plus"}/>
-                  </button>
-                  <Button variant={"primary"}>مشاهده</Button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
+      <div className={"py-4"}>
+        {/* title & link */}
+        <div className="flex items-center justify-between p-3 pt-6">
+          <h3 className={"text-lg"} >تخفیفات ویژه</h3>
+          <Link className={"underline text-sm"} to={'/products?category=incredible'} >
+            مشاهده همه
+            <i className={"bi bi-chevron-compact-left"} />
+          </Link>
         </div>
+        {/* list of cards */}
+        <ProductsRow list={list} />
       </div>
     </>
   );
 }
 
 export default Incredible;
-
-function makeId() {
-  let result = "";
-  let characters = "abcdefghijklmnopqrstuvwxyz0123456789";
-  let charactersLength = characters.length;
-  for ( let i = 0; i < 10; i++ ) {
-    result += characters.charAt(Math.floor(Math.random() * charactersLength));
-  }
-  return result;
-}

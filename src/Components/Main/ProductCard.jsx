@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function ProductCard({ Image, route, title, subtitle, discount, originalPrice, newPrice }) {
+function ProductCard({ image, route, title, subtitle, discount, originalPrice, newPrice }) {
    return (
       <div className={"w-72 px-4 inline-block product"}>
          {/* Card */}
          <div className="rounded-md bg-white text-gray-800 p-0 overflow-hidden shadow-lg">
             {/* image */}
             <div className={"relative h-44 sm:h-32 md:h-40"}>
-               <img className={"absolute inset-0 w-full h-full object-cover object-center"} src={Image} />
+               <img className={"absolute inset-0 w-full h-full object-cover object-center"} src={image} />
                <Link
                   className={"absolute inset-0"}
                   to={route}
