@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 /*	IRANSans	*/
 @font-face {
 	font-family: IRANSans;
@@ -56,6 +59,17 @@
 	font-weight: 900;
 }
 
+@font-face {
+	font-family: flow;
+	src: url("./fonts/flow.woff");
+	font-style: auto;
+	font-weight: auto;
+}
+
+* {
+	transition: all .3s !important;
+}
+
 html,
 body {
 	overflow-x: hidden;
@@ -77,4 +91,8 @@ body {
 .hidden {
 	opacity: 0;
 	pointer-events: none;
+}
+
+.flow-text {
+	font-family: flow;
 }
