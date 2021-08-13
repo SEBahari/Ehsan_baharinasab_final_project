@@ -5,7 +5,7 @@ function HeroItem() {
    return (
       <div className={"w-full lg:p-5"}>
          <div className={"bg-gray-400 relative lg:flex lg:flex-row-reverse"}>
-            <div className={"w-full h- filter brightness-50 lg:w-1/2"}>
+            <div className={"w-full h-full filter brightness-50 lg:w-1/2"}>
                <img className={"w-full h-full object-cover object-center"} src={image} />
             </div>
             <div className="absolute inset-0 flex flex-col items-center justify-center text-gray-100 lg:static lg:flex-1 lg:text-gray-800">
