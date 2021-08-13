@@ -6,7 +6,7 @@ import Incredible from "../../../Components/Main/Incredible";
 export default function Home() {
   return (
     <>
-      {/*Banner*/}
+      {/* -------------------------------- Banner -------------------------------- */}
       <Banner
         image={bannerImage}
         alignment={"left"}
@@ -17,7 +17,7 @@ export default function Home() {
         route={"/products/mercedes-g-500"}
       />
 
-      {/* incredible products */}
+      {/* ------------------------- incredible products ------------------------- */}
       <Incredible />
     </>
   );

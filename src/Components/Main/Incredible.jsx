@@ -59,7 +59,7 @@ function Incredible() {
   return (
     <>
       <div className={"py-4"}>
-        {/* title & link */}
+        {/* ----------------------------- title & link ----------------------------- */}
         <div className="flex items-center justify-between p-3 pt-6">
           <h3 className={"text-lg"} >تخفیفات ویژه</h3>
           <Link className={"underline text-sm"} to={'/products?category=incredible'} >
@@ -67,7 +67,7 @@ function Incredible() {
             <i className={"bi bi-chevron-compact-left"} />
           </Link>
         </div>
-        {/* list of cards */}
+        {/* ----------------------------- list of cards ---------------------------- */}
         <ProductsRow list={list} />
       </div>
     </>

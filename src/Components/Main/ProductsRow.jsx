@@ -4,9 +4,8 @@ import ProductCard from "./ProductCard";
 function ProductsRow({ list }) {
    return (
       <>
-         {/* products list */}
+         {/* ---------------------------- products list ---------------------------- */}
          <div className="overflow-x-auto overflow-y-hidden whitespace-nowrap">
-
             {
                list.map((item, index) => (
                   <ProductCard
@@ -21,8 +20,6 @@ function ProductsRow({ list }) {
                   />
                ))
             }
-
-
          </div>
       </>
    );

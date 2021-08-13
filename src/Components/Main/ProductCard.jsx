@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 function ProductCard({ image, route, title, subtitle, discount, originalPrice, newPrice }) {
    return (
       <div className={"w-72 px-4 inline-block product"}>
-         {/* Card */}
+         {/* --------------------------------- Card --------------------------------- */}
          <div className="rounded-md bg-white text-gray-800 p-0 overflow-hidden shadow-lg">
-            {/* image */}
+            {/* -------------------------------- Image -------------------------------- */}
             <div className={"relative h-44 sm:h-32 md:h-40"}>
                <img className={"absolute inset-0 w-full h-full object-cover object-center"} src={image} />
                <Link
@@ -14,7 +14,7 @@ function ProductCard({ image, route, title, subtitle, discount, originalPrice, n
                   to={route}
                />
             </div>
-            {/* content */}
+            {/* ------------------------------- content ------------------------------- */}
             <div className={"p-4 bg-gradient-to-b from-yellow-50 to-gray-200 "}>
                <div className={"flex items-end border-b border-gray-300 pb-2 mb-3"}>
                   <div className={"title flex-1 relative"}>
