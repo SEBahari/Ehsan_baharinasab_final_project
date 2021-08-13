@@ -1,7 +1,8 @@
 import React from "react";
 import Banner from "../../../Components/Main/Banner";
-import bannerImage from "../../../images/00-mercedes-benz-vision-eq-silver-arrow-world-premiere-monterey-car-week-2018-3400x1440.jpg";
+import bannerImage from "../../../images/WallpaperStudio10-133870-3840x2160.jpg";
 import Incredible from "../../../Components/Main/Incredible";
+import HeroItem from "../../../Components/Main/HeroItem";
 
 export default function Home() {
   return (
@@ -19,6 +20,9 @@ export default function Home() {
 
       {/* ------------------------- incredible products ------------------------- */}
       <Incredible />
+
+      {/* ------------------------------ Hero Link ------------------------------ */}
+      <HeroItem />
     </>
   );
 }
