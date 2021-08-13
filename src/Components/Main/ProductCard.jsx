@@ -15,7 +15,7 @@ function ProductCard({ image, route, title, subtitle, discount, originalPrice, n
                />
             </div>
             {/* ------------------------------- content ------------------------------- */}
-            <div className={"p-4 bg-gradient-to-b from-yellow-50 to-gray-200 "}>
+            <div className={"p-4"}>
                <div className={"flex items-end border-b border-gray-300 pb-2 mb-3"}>
                   <div className={"title flex-1 relative"}>
                      <h4 className={"text-xl"}>{title}</h4>
@@ -40,9 +40,9 @@ function ProductCard({ image, route, title, subtitle, discount, originalPrice, n
                   <div className="price flex flex-col flex-1 text-left">
                      <div className="befPrice flex flex-row-reverse items-end">
                         <span className={"bg-red-600 rounded-3xl text-red-50 p-1 text-xs"}>{discount}%</span>
-                        <span className="prPrice text-sm line-through pl-2">{originalPrice}$</span>
+                        <span className="prPrice text-base line-through pl-2">{originalPrice}$</span>
                      </div>
-                     <div className={"pl-1 text-xl"}>{newPrice}$</div>
+                     <div className={"pl-1 text-2xl"}>{newPrice}$</div>
                   </div>
                </div>
             </div>
