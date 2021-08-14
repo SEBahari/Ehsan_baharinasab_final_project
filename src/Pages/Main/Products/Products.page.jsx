@@ -1,4 +1,5 @@
 import React from "react";
+import Filter from "../../../Components/Main/Filter";
 import HProduct from "../../../Components/Main/HProduct";
 import cardImage1 from '../../../images/01-Mercedes-Benz-G-Class-G-500-4x4-2-Wallpaper-3840x2160.jpg';
 import cardImage2 from '../../../images/6x6-gornos-w.jpg';
@@ -18,16 +19,7 @@ function Products() {
   return (
     <div className={"pt-32 container mx-auto sm:pt-36"}>
       {/* -------------------------------- filters ------------------------------- */}
-      <div className={"flex gap-4 px-4 mb-2 sm:px-10"}>
-        <button className={"rounded-md py-1 px-2 bg-gray-300 text-gray-600"}>
-          فیلتر
-          <i className={"bi bi-funnel pr-2"} />
-        </button>
-        <button className={"rounded-md py-1 px-2 bg-gray-300 text-gray-600"}>
-          پر بازدیدترین
-          <i className={"bi bi-sort-down pr-2"} />
-        </button>
-      </div>
+      <Filter />
       <hr className={"mb-1"} />
 
       {/* ----------------------------- bread-crumbs ----------------------------- */}

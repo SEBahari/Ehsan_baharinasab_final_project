@@ -1,0 +1,5 @@
+@media (min-width: 640px) {
+  .filter-btn {
+    writing-mode: sideways-lr;
+  }
+}
