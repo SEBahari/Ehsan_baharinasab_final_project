@@ -1,11 +1,18 @@
 module.exports = {
-  purge: [ "./src/**/*.{js,jsx,ts,tsx}", "./public/index.html" ],
+  purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      borderWidth: {
+        '0.5': '0.5px'
+      }
+    },
   },
   variants: {
-    extend: {},
+    extend: {
+      zIndex: ['hover'],
+      margin: ['hover']
+    },
   },
   plugins: [],
 };
