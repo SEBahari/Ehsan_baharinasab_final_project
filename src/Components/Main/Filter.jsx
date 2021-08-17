@@ -7,7 +7,7 @@ function Filter() {
    const [showSort, setShowSort] = useState(false);
    const [showFilter, setShowFilter] = useState(false);
    return (
-      <div className={"flex gap-2 px-4 mb-2 sm:px-10"}>
+      <div className={"flex gap-2 px-4 mb-2 sm:px-10 lg:hidden"}>
          <button className={`py-1 px-2 rounded-md bg-gray-300 text-gray-700`} onClick={() => setShowFilter(true)}>
             فیلتر
             <i className={"bi bi-funnel pr-2"} />
