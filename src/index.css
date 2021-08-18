@@ -3,96 +3,96 @@
 @tailwind utilities;
 /*	IRANSans	*/
 @font-face {
-	font-family: IRANSans;
-	src: url("./fonts/IRANSans_UltraLight.ttf");
-	font-style: normal;
-	font-weight: 200;
+  font-family: IRANSans;
+  src: url('./fonts/IRANSans_UltraLight.ttf');
+  font-style: normal;
+  font-weight: 200;
 }
 
 @font-face {
-	font-family: IRANSans;
-	src: url("./fonts/IRANSans_Light.ttf");
-	font-style: normal;
-	font-weight: 300;
+  font-family: IRANSans;
+  src: url('./fonts/IRANSans_Light.ttf');
+  font-style: normal;
+  font-weight: 300;
 }
 
 @font-face {
-	font-family: IRANSans;
+  font-family: IRANSans;
 
-	src: url("./fonts/IRANSans.ttf");
-	font-style: normal;
-	font-weight: 400;
+  src: url('./fonts/IRANSans.ttf');
+  font-style: normal;
+  font-weight: 400;
 }
 
 @font-face {
-	font-family: IRANSans;
-	src: url("./fonts/IRANSans_Medium.ttf");
-	font-style: normal;
-	font-weight: 500;
+  font-family: IRANSans;
+  src: url('./fonts/IRANSans_Medium.ttf');
+  font-style: normal;
+  font-weight: 500;
 }
 
 @font-face {
-	font-family: IRANSans;
-	src: url("./fonts/IRANSans_Bold.ttf");
-	font-style: normal;
-	font-weight: 600;
+  font-family: IRANSans;
+  src: url('./fonts/IRANSans_Bold.ttf');
+  font-style: normal;
+  font-weight: 600;
 }
 
 @font-face {
-	font-family: IRANSans;
-	src: url("./fonts/IRANSans_Bold.ttf");
-	font-style: normal;
-	font-weight: 700;
+  font-family: IRANSans;
+  src: url('./fonts/IRANSans_Bold.ttf');
+  font-style: normal;
+  font-weight: 700;
 }
 
 @font-face {
-	font-family: IRANSans;
-	src: url("./fonts/IRANSans_Black.ttf");
-	font-style: normal;
-	font-weight: 800;
+  font-family: IRANSans;
+  src: url('./fonts/IRANSans_Black.ttf');
+  font-style: normal;
+  font-weight: 800;
 }
 
 @font-face {
-	font-family: IRANSans;
-	src: url("./fonts/IRANSans_Black.ttf");
-	font-style: normal;
-	font-weight: 900;
+  font-family: IRANSans;
+  src: url('./fonts/IRANSans_Black.ttf');
+  font-style: normal;
+  font-weight: 900;
 }
 
 @font-face {
-	font-family: flow;
-	src: url("./fonts/flow.woff");
-	font-style: auto;
-	font-weight: auto;
+  font-family: flow;
+  src: url('./fonts/flow.woff');
+  font-style: auto;
+  font-weight: auto;
 }
 
 * {
-	transition: all .3s !important;
+  transition: all 0.3s !important;
 }
 
 html,
 body {
-	overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 body {
-	color: #515151;
-	background: #f5f5f5;
-	position: relative;
-	overflow-x: hidden;
-	font-family: IRANSans, sans-serif !important;
+  color: #515151;
+  background: #f5f5f5;
+  position: relative;
+  overflow-x: hidden;
+  font-family: IRANSans, sans-serif !important;
 }
 
 .visible {
-	opacity: 1;
-	pointer-events: auto;
+  opacity: 1;
+  pointer-events: auto;
 }
 
-.hidden {
-	opacity: 0;
-	pointer-events: none;
-}
+/* .hidden {
+  opacity: 0;
+  pointer-events: none;
+} */
 
 .flow-text {
-	font-family: flow;
+  font-family: flow;
 }

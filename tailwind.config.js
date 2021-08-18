@@ -11,8 +11,11 @@ module.exports = {
   variants: {
     extend: {
       zIndex: ['hover'],
-      margin: ['hover']
+      margin: ['hover'],
+      animation: ['focus']
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms')
+  ],
 };

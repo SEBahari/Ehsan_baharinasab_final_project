@@ -9,7 +9,7 @@ function SingleProduct({ image, title, subtitle, seller, rate, rateOf, discount,
          <div className={`
          relative flex gap-5 items-start bg-white rounded-lg shadow-lg py-3 px-4 overflow-hidden
          sm:p-5
-         lg:shadow-none lg:rounded-none lg:border-0.5 lg:border-gray-200 lg:flex-col lg:items-stretch lg:p-3 lg:-mt-1 lg:-ml-1
+         lg:shadow-none lg:rounded-none lg:border-0.5 lg:border-gray-200 lg:flex-col lg:items-stretch lg:p-3
          lg:hover:z-10 lg:hover:shadow-2xl 
          `}>
             {/* ------------------------------------ Image ----------------------------------- */}
