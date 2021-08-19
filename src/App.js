@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import routes from "./Router/web.routes";
 import Loader from "./Components/Loader/Loader";
 
@@ -11,14 +11,13 @@ function App() {
       <React.Suspense fallback={<Loader/>}>
         <Switch>
           {
-            routes.map(( { path, exact, Component, isPrivate }, index ) => (
+            routes.map(({ path, exact, Component }, index) => (
               <Route
                 key={index}
                 path={path}
                 exact={exact}
-              >
-                {(isPrivate && !isLogin) ? <Redirect to={"/login"}/> : <Component/>}
-              </Route>
+                component={Component}
+              />
             ))
           }
         </Switch>
