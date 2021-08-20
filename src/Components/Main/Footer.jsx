@@ -30,7 +30,7 @@ function Footer() {
             </div>
          </div>
          <div className="copy text-center text-xs py-2 to text-gray-400 sm:text-sm lg:text-base" style={{ direction: 'ltr' }}>
-            &copy; KOSAR - all rights reserved
+            &copy; KARZAR - all rights reserved
          </div>
       </footer>
    );

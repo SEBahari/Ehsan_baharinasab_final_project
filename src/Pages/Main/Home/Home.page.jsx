@@ -1,6 +1,6 @@
 import React from "react";
 import Banner from "../../../Components/Main/Banner";
-import bannerImage from "../../../images/WallpaperStudio10-133870-3840x2160.jpg";
+import bannerImage from "../../../images/image_20171103172326.jpg";
 import Incredible from "../../../Components/Main/Incredible";
 import HeroItem from "../../../Components/Main/HeroItem";
 import ContactUs from "../../../Components/Main/ContactUs";

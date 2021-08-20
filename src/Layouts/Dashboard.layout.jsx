@@ -41,9 +41,6 @@ function Dashboard() {
             <nav className={"h-12 pr-14 pl-8 bg-gradient-to-r from-cyan-500 to-teal-500 flex items-center justify-between"}>
               <div className=""></div>
               <div>
-                <Link to={"/"} className={"leading-none text-white text-2xl pl-2"}>
-                  <i className={"bi bi-house"} />
-                </Link>
                 <Link to={"/login"} className={"leading-none text-white text-2xl "}>
                   <i className={"bi bi-person-circle"} />
                 </Link>
