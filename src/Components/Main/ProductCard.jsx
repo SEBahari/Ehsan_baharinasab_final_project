@@ -8,7 +8,7 @@ function ProductCard({ image, route, title, subtitle, discount, originalPrice, n
          <div className="rounded-md bg-white text-gray-800 p-0 overflow-hidden shadow-lg">
             {/* -------------------------------- Image -------------------------------- */}
             <div className={"relative h-44 sm:h-32 md:h-40"}>
-               <img className={"absolute inset-0 w-full h-full object-cover object-center"} src={image} />
+               <img className={"absolute inset-0 w-full h-full object-cover object-center"} src={image} alt={title + ' ' + subtitle} />
                <Link
                   className={"absolute inset-0"}
                   to={route}

@@ -1,10 +1,78 @@
 import React from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
-// import productImage from '../../../images/6x6-gornos-w.jpg';
-// import productImage from '../../../images/photo_۲۰۱۸-۰۴-۰۲_۱۳-۴۴-۴۹.jpg';
-import productImage from '../../../images/93988803_907625239684186_2928864674942205986_n.jpg';
+import productImage1 from '../../../images/6x6-gornos-w.jpg';
+import productImage2 from '../../../images/photo_۲۰۱۸-۰۴-۰۲_۱۳-۴۴-۴۹.jpg';
+import productImage3 from '../../../images/93988803_907625239684186_2928864674942205986_n.jpg';
+const slides = [
+  { id: 1, image: productImage1, visible: true, alt: 'altOne' },
+  { id: 2, image: productImage2, visible: false, alt: 'altThree' },
+  { id: 3, image: productImage3, visible: false, alt: 'altTwo' },
+];
+const about = `
+لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+ `;
+
+const parametrs = {
+  "دسته اول": [
+    { title: 'عنوان-1-1', body: 'مقدار-1-1' },
+    { title: 'عنوان-1-2', body: 'مقدار-1-2' },
+    { title: 'عنوان-1-3', body: 'مقدار-1-3' },
+    { title: 'عنوان-1-4', body: 'مقدار-1-4' },
+  ],
+  "دسته دوم": [
+    { title: 'عنوان-2-1', body: 'مقدار-2-1' },
+    { title: 'عنوان-2-2', body: 'مقدار-2-2' },
+    { title: 'عنوان-2-3', body: 'مقدار-2-3' },
+  ],
+  "دسته سوم": [
+    { title: 'عنوان-3-1', body: 'مقدار-3-1' },
+    { title: 'عنوان-3-2', body: 'مقدار-3-2' },
+    { title: 'عنوان-3-3', body: 'مقدار-3-3' },
+    { title: 'عنوان-3-4', body: 'مقدار-3-4' },
+    { title: 'عنوان-3-5', body: 'مقدار-3-5' },
+  ]
+};
+
 
 function Product() {
+  const [popup, showPopup] = useState(false);
+  const [popupTitle, setPopupTitle] = useState('');
+  const [popupContent, setPopupContent] = useState('');
+
+  const showAbout = () => {
+    setPopupTitle('درباره کالا');
+    setPopupContent(<p className={"text-gray-500 leading-relaxed"}>{about}</p>);
+    showPopup(true);
+  };
+  const showParameters = () => {
+    const content = Object.entries(parametrs).map((item, index) => (
+      <div className={"mb-6"} key={index}>
+        <h1 className={"text-xl font-bold"}>{item[0]}:</h1>
+        <ul className={"pr-8"} >
+          {
+            item[1].map((item, index) => (
+              <li className={""} key={index}>
+                <span className={"w-1/3 inline-block text-gray-800 font-medium"}>{item.title}</span>
+                <span className={"w-1/3 inline-block text-gray-500 font-medium"}>{item.body}</span>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    ));
+    setPopupTitle('مشخصات فنی کالا');
+    setPopupContent(content);
+    showPopup(true);
+  };
+  // const showSlide = (id) => {
+  //   slides.map(slide=>slide.id==id?)
+  // }
+  const slideLeft = () => {
+  };
+  const slideRight = () => {
+  };
+
   return (
     <div className={"pt-32 px-4 pb-3 container mx-auto relative"}>
       {/* ------------------------------ Bread Crumbs ------------------------------ */}
@@ -20,24 +88,47 @@ function Product() {
       </div>
       {/* --------------------------------- Product -------------------------------- */}
       <div className={"product"}>
-        {/* --------------------------------- Preview -------------------------------- */}
+        {/*  Preview  */}
         <div className={"bg-white rounded-xl p-3 flex flex-col items-stretch shadow-md mt-3"}>
+
+          {/* Product Image */}
+          <div className={"image-container flex flex-col items-stretch gap-4 "}>
+            {/* --------------------------------- Actions -------------------------------- */}
+            <div className={"flex justify-start text-gray-500 py-1"}>
+              <button className={"font-bold mx-2"}><i className={"bi-heart"} /></button>
+              <button className={"font-bold mx-2"}><i className={"bi-share"} /></button>
+              <button className={"font-bold mx-2"}><i className={"bi-graph-up"} /></button>
+              <button className={"font-bold mx-2"}><i className={"bi-bell"} /></button>
+              <button className={"font-bold mx-2"}><i className={"bi-list-ul"} /></button>
+            </div>
+            {/* ---------------------------------- Image --------------------------------- */}
+            <div className={"relative image h-52 w-60 mx-auto"}>
+              {
+                slides.map(({ id, image, visible, alt }) => (
+                  <img className={`absolute w-full h-full object-contain object-center ${visible ? 'block' : 'hidden'}`} src={image} key={id} alt={alt} />
+                ))
+              }
+              <button className="absolute transform -translate-y-1/2 top-1/2 -right-10 p-4 text-lg leading-none" onClickk={slideRight}><i className={"bi bi-chevron-right"} /></button>
+              <button className="absolute transform -translate-y-1/2 top-1/2 -left-10 p-4 text-lg leading-none" onClickk={slideLeft}><i className={"bi bi-chevron-left"} /></button>
+            </div>
+            {/* ----------------------------- Slider Buttons ----------------------------- */}
+            <div className={"slider w-full flex items-center justify-center gap-2"}>
+              <button className={"rounded-full bg-gray-700 opacity-20 w-2 h-2"} />
+              <button className={"rounded-full bg-gray-700 opacity-60 w-3 h-3"} />
+              <button className={"rounded-full bg-gray-700 opacity-100 w-4 h-4"} />
+              <button className={"rounded-full bg-gray-700 opacity-60 w-3 h-3"} />
+              <button className={"rounded-full bg-gray-700 opacity-20 w-2 h-2"} />
+            </div>
+          </div>
+
+          <hr className={"my-3"} />
+
           {/* title & price */}
           <div className={"flex justify-between items-center"} >
-            <div>
-              {/* ---------------------------------- Title --------------------------------- */}
-              <div className="title mb-2">
-                <h1 className={""}>عنوان محصول</h1>
-                <h2 className={""}>زیر عنوان</h2>
-              </div>
-              {/* --------------------------------- Actions -------------------------------- */}
-              <div className={"flex justify-end text-gray-500 py-1"}>
-                <button className={"font-bold mx-2"}><i className={"bi-heart"} /></button>
-                <button className={"font-bold mx-2"}><i className={"bi-share"} /></button>
-                <button className={"font-bold mx-2"}><i className={"bi-graph-up"} /></button>
-                <button className={"font-bold mx-2"}><i className={"bi-bell"} /></button>
-                <button className={"font-bold mx-2"}><i className={"bi-list-ul"} /></button>
-              </div>
+            {/* ---------------------------------- Title --------------------------------- */}
+            <div className="title mb-2">
+              <h1 className={""}>عنوان محصول</h1>
+              <h2 className={""}>زیر عنوان</h2>
             </div>
             <div>
               {/* ---------------------------------- Price --------------------------------- */}
@@ -50,25 +141,10 @@ function Product() {
               </div>
             </div>
           </div>
-          <hr />
-          {/* Product Image */}
-          <div className={"image-container flex flex-col items-center gap-4 pt-4"}>
-            {/* ---------------------------------- Image --------------------------------- */}
-            <div className={"image h-52 w-60"}>
-              <img className={"w-full h-full object-contain object-center"} src={productImage} alt={"product"} />
-            </div>
-            {/* ----------------------------- Slider Buttons ----------------------------- */}
-            <div className={"slider w-full flex items-center justify-center gap-2"}>
-              <button className={"rounded-full bg-gray-700 opacity-20 w-2 h-2"} />
-              <button className={"rounded-full bg-gray-700 opacity-60 w-3 h-3"} />
-              <button className={"rounded-full bg-gray-700 opacity-100 w-4 h-4"} />
-              <button className={"rounded-full bg-gray-700 opacity-60 w-3 h-3"} />
-              <button className={"rounded-full bg-gray-700 opacity-20 w-2 h-2"} />
-            </div>
-          </div>
+
         </div>
 
-        {/* --------------------------------- Seller --------------------------------- */}
+        {/*  Seller  */}
         <div className={"bg-white rounded-xl p-4 flex flex-col items-stretch shadow-md mt-3"}>
           {/* Seller Name */}
           <div className={"flex gap-4"}>
@@ -91,39 +167,46 @@ function Product() {
           </div>
         </div>
 
-        {/* ------------------------------- Description ------------------------------ */}
+        {/*  Description  */}
         <div className={"bg-white rounded-xl p-4 flex flex-col items-stretch shadow-md mt-3"}>
           {/* About */}
           <div className={"p-2"} >
             {/* title */}
             <div className={"flex justify-between items-center mb-3"} >
               <h5>درباره کالا</h5>
-              <div className={"text-xs p-2 text-blue-500 cursor-pointer"} >
+              <button className={"text-xs p-2 text-blue-500 cursor-pointer"} onClick={showAbout} >
                 بیشتر
                 <i className={"bi-chevron-left"} />
-              </div>
+              </button>
             </div>
             {/* body */}
-            <p className={"text-gray-500"} >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt quam, quibusdam cum asperiores, ullam ipsa sit vero sint eius tenetur excepturi alias a, aliquid quae eos voluptatem fuga. Aut, quos....</p>
+            <p className={"text-gray-500"} >{about.substring(0, 180)}...</p>
           </div>
+
           <hr className={"my-2"} />
+
           {/* Moshakhasat Fani */}
           <div className={"p-2"} >
             {/* title */}
             <div className={"flex justify-between items-center mb-3"} >
               <h5>مشخصات فنی</h5>
-              <div className={"text-xs p-2 text-blue-500 cursor-pointer"} >
+              <button className={"text-xs p-2 text-blue-500 cursor-pointer"} onClick={showParameters} >
                 بیشتر
                 <i className={"bi-chevron-left"} />
-              </div>
+              </button>
             </div>
             {/* body */}
             <div className={"text-gray-500"} >
-              <ul className={"list-disc pr-4"} >
-                <li>one</li>
-                <li>two</li>
-                <li>three</li>
-                <li>four</li>
+              <h1 className={"text-xl font-bold"}>{Object.entries(parametrs)[0][0]}:</h1>
+              <ul className={"pr-8"} >
+                {
+                  Object.entries(parametrs)[0][1].map((item, index) => (
+                    <li className={""} key={index}>
+                      <span className={"w-1/3 inline-block text-gray-800 font-medium"}>{item.title}</span>
+                      <span className={"w-1/3 inline-block text-gray-500 font-medium"}>{item.body}</span>
+                    </li>
+                  ))
+                }
               </ul>
             </div>
           </div>
@@ -171,6 +254,20 @@ function Product() {
       {/* ------------------------------- Add To Cart ------------------------------ */}
       <div className={"fixed inset-x-0 bottom-0 p-3 bg-red-50 shadow-inner"}>
         <button className={"bg-red-500 text-red-50 w-full p-3 rounded-md"} >افزودن به سبد خرید</button>
+      </div>
+      {/* --------------------------------- Pop Up} -------------------------------- */}
+      <div className={`fixed top-32 inset-x-4 bottom-8 bg-white rounded-xl shadow-3xl border-2 border-blue-400 flex flex-col items-stretch z-40 overflow-hidden ${popup ? 'block' : 'hidden'} sm:top-32 lg:hidden`}>
+        {/* filter header */}
+        <div className={"p-3 border-b border-gray-300 flex gap-4 sm:p-4"}>
+          <button className={"text-xl"} onClick={() => showPopup(false)}><i className={"bi bi-x-lg"} /></button>
+          <h4>{popupTitle}</h4>
+        </div>
+        {/* filter body */}
+        <div className={"flex-1 overflow-y-auto overflow-x-hidden overscroll-y-none p-6 sm:m-4"}>
+          {popupContent}
+        </div>
+        {/* filter footer */}
+        {/* <button className={"filter-btn p-3 bg-blue-600 text-blue-100 font-medium "}>اعمال فیلترها</button> */}
       </div>
     </div >
   );

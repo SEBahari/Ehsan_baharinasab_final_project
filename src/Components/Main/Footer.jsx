@@ -20,7 +20,7 @@ function Footer() {
                <div className={"text-2xl mb-3"}>ثبت ایمیل</div>
                <div className={"flex items-stretch h-12"}>
                   <input
-                     type="email" autoComplete={false} placeholder={"mail@example.com"}
+                     type="email" autoComplete="false" placeholder={"mail@example.com"}
                      className={"text-gray-900 flex-1 border border-gray-500 outline-none p-4 focus:ring-4 focus:ring-gray-500 lg:flex-none lg:w-64"}
                   />
                   <button className={"w-12 bg-gray-600 border-gray-900 text-gray-100 text-2xl outline-none focus:ring-4 focus:ring-gray-500"} type="submit">

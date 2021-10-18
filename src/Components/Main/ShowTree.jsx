@@ -54,12 +54,12 @@ const detail = {
       route: "/products/macan",
     }
   ],
-  title: "تخفیفات ویژه",
-  route: "/products?category=incredible",
+  title: "کامیون",
+  route: "/products?category=truck",
 };
 
-function Incredible() {
+function ShowThree() {
   return <ProductsRow {...detail} />;
 }
 
-export default Incredible;
+export default ShowThree;

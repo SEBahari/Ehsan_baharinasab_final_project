@@ -3,7 +3,7 @@ import React from 'react';
 function Products() {
    return (
       <div className={"w-full h-full flex flex-col items-center justify-center"}>
-         <div className={"w-4/5 py-2 flex items-center"}>
+         <div className={"w-4/5 py-2 flex items-center mb-3"}>
             <h1 className={"flex-1 text-2xl font-medium"}>مدیریت کالاها</h1>
             <div className={""}>
                <button className={"bg-cyan-800 text-cyan-50 rounded py-2 px-3 "}>اضافه کردن</button>

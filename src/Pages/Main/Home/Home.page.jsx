@@ -4,6 +4,9 @@ import bannerImage from "../../../images/image_20171103172326.jpg";
 import Incredible from "../../../Components/Main/Incredible";
 import HeroItem from "../../../Components/Main/HeroItem";
 import ContactUs from "../../../Components/Main/ContactUs";
+import ShowOne from "../../../Components/Main/ShowOne";
+import ShowTwo from "../../../Components/Main/ShowTwo";
+import ShowThree from "../../../Components/Main/ShowTree";
 
 export default function Home() {
   return (
@@ -24,6 +27,11 @@ export default function Home() {
 
       {/* ------------------------------ Hero Link ------------------------------ */}
       <HeroItem />
+
+      {/* -------------ShowThree------------ incredible products ------------------------- */}
+      <ShowOne />
+      <ShowTwo />
+      <ShowThree />
 
       {/* ------------------------------ Contact Us ------------------------------ */}
       <ContactUs />

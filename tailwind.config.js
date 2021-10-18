@@ -1,8 +1,13 @@
 const colors = require('tailwindcss/colors');
 
 module.exports = {
-  purge: [],
-  presets: [],
+  purge: {
+    enabled: true,
+    content: [
+      './src/**/*.jsx',
+      './src/**/*.js'
+    ]
+  },
   darkMode: false, // or 'media' or 'class'
   theme: {
     screens: {
@@ -810,24 +815,6 @@ module.exports = {
       50: '50',
     },
   },
-  variantOrder: [
-    'first',
-    'last',
-    'odd',
-    'even',
-    'visited',
-    'checked',
-    'empty',
-    'read-only',
-    'group-hover',
-    'group-focus',
-    'focus-within',
-    'hover',
-    'focus',
-    'focus-visible',
-    'active',
-    'disabled',
-  ],
   variants: {
     accessibility: ['responsive', 'focus-within', 'focus'],
     alignContent: ['responsive'],

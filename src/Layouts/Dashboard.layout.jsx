@@ -3,9 +3,10 @@ import { useState } from "react";
 import { Switch, Route, useRouteMatch, Redirect, NavLink, Link } from "react-router-dom";
 import routes from "../Router/dashboard.routes";
 import "bootstrap-icons/font/bootstrap-icons.css";
-const isLogin = true;
+import { useSelector } from "react-redux";
 
 function Dashboard() {
+  const isLogin = useSelector(state => state.auth.isLogin);
   const match = useRouteMatch();
   const [sidebar, setSidebar] = useState(true);
   return (

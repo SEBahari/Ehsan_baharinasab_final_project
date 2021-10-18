@@ -6,7 +6,7 @@ function HeroItem() {
       <div className={"w-full lg:p-5"}>
          <div className={"bg-gray-400 relative lg:flex lg:flex-row-reverse"}>
             <div className={"w-full h-full filter brightness-50 lg:w-1/2"}>
-               <img className={"w-full h-full object-cover object-center"} src={image} />
+               <img className={"w-full h-full object-cover object-center"} src={image} alt={"hero"} />
             </div>
             <div className="absolute inset-0 flex flex-col items-center justify-center text-gray-100 lg:static lg:flex-1 lg:text-gray-800">
                <p className={"font-medium text-5xl mb-1"} >Mansory</p>

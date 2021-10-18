@@ -83,10 +83,10 @@ body {
   font-family: IRANSans, sans-serif !important;
 }
 
-.visible {
+/* .visible {
   opacity: 1;
   pointer-events: auto;
-}
+} */
 
 /* .hidden {
   opacity: 0;
